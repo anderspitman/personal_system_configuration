@@ -13,6 +13,11 @@ Bundle 'groenewege/vim-less'
 Plugin 'fatih/vim-go'
 "
 Plugin 'wting/rust.vim'
+"
+Plugin 'leafgarland/typescript-vim'
+"
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 "" All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -21,8 +26,8 @@ set mouse=a
 set number
 set ignorecase
 set showcmd
-set shiftwidth=2
-set tabstop=2
+set shiftwidth=4
+set tabstop=4
 set expandtab
 set incsearch
 set hlsearch
@@ -42,7 +47,7 @@ map <F12> :!ctags -R .<CR><CR>
 "map <F7> :cd dido/bcn <CR> :make! -j13 <CR> :cd ../../ <CR>
 "map <F7> :cd dido <CR> :!./build.sh <CR> :cd ../ <CR>
 map <F8> :!nosetests <CR>
-map <F9> :!make test <CR>
+map <F9> v
 " List all ctags for identifier
 map <F2> :tselect <CR>
 " Search recursively for word under cursor. Only C/C++ files. Use '!' to avoid
