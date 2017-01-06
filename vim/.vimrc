@@ -1,28 +1,33 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-"
-"" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-"
-Bundle 'groenewege/vim-less'
-"
-Plugin 'fatih/vim-go'
-"
-Plugin 'wting/rust.vim'
-"
-Plugin 'leafgarland/typescript-vim'
-"
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-let g:vim_markdown_folding_disabled=1
-Plugin 'kylef/apiblueprint.vim'
-"" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+"" set the runtime path to include Vundle and initialize
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+""
+""" let Vundle manage Vundle, required
+"Plugin 'gmarik/Vundle.vim'
+""
+"Bundle 'groenewege/vim-less'
+""
+"Plugin 'fatih/vim-go'
+""
+"Plugin 'wting/rust.vim'
+""
+"Plugin 'leafgarland/typescript-vim'
+""
+"Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
+"let g:vim_markdown_folding_disabled=1
+"Plugin 'kylef/apiblueprint.vim'
+""" All of your Plugins must be added before the following line
+"call vundle#end()            " required
+"filetype plugin indent on    " required
+
+call plug#begin()
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+call plug#end()
 
 set mouse=a
 set number
@@ -31,6 +36,7 @@ set showcmd
 set shiftwidth=4
 set tabstop=4
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
 set expandtab
 set incsearch
 set hlsearch
